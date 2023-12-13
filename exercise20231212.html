@@ -12,15 +12,29 @@
             /* Phone */
             main {
 
+display: flex;
+flex-direction: column;
+}
+
+#one, #two, #three {
+background-color:aqua;
+margin: 2em;
+padding: 2em;
+}
+
+        /* Tablet */
+            @media screen and (min-width: 768px){
+            main {
+
                 display: flex;
                 flex-direction: column;
             }
 
             #one, #two, #three {
-                background-color:aqua;
-                margin: 2em;
-                padding: 2em;
+                background-color: pink ;
+                line-height: 200%;
             }
+        }
 
         </style>
     </head>
