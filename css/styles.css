@@ -9,6 +9,12 @@
                 width: 1200px;
             }
 
+            /*Header*/
+            h1.header {
+                font-family: 'Satisfy', cursive;
+                color: #382633;
+            }
+
             /*Navigation*/
             nav ul {
                 display: flex;
