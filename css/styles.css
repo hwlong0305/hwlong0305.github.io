@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Quilt Gallery</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css">
-        <style>
+<style>
             * {
                 margin: 0;
                 padding: 0;
@@ -15,6 +8,8 @@
                 margin: 0 auto;
                 width: 1200px;
             }
+
+            /*Navigation*/
             nav ul {
                 display: flex;
                 list-style: none;
@@ -29,6 +24,8 @@
             nav a:hover {
                 text-decoration: underline;
             }
+
+            /*Breadcrumbs*/
             .breadcrumb {
                 display: flex;
                 list-style: none;
@@ -50,6 +47,7 @@
             .breadcrumb a:hover {
                 text-decoration: underline;
             }
+            /*Gallery*/
             .quilt-pic {
                 display: inline-block;
                 border 1px solid black;
@@ -71,43 +69,3 @@
             }
 
         </style>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <ol class="breadcrumb">
-            <li><a href="">Home</a></li>
-            <li>Gallery</li>
-        </ol>
-        <section class="intro">
-            <h1>Quilt Gallery</h1>
-            <p>Here are a few of the quilts that my friends and I have made, as well as ones that inspire me.</p>
-        </section>
-        <section class="quilt-gallery">
-            <div class="quilt-pic">
-                <img src="images\quilt1-pixabay.jpg">
-                <h2>Title of Quilt 1</h2>
-                <p class="artist">by Jane Doe</p>
-            </div>
-
-            <div class="quilt-pic">
-                <img src="images\quilt2-pixabay.jpg">
-                <h2>Title of Quilt 2</h2>
-                <p class="artist">by Jane Doe</p>
-            </div>
-
-            <div class="quilt-pic">
-                <img src="images\quilt3-pixabay.jpg">
-                <h2>Title of Quilt 3</h2>
-                <p class="artist">by Jane Doe</p>
-            </div>
-        </section>
-    </body>
-</html>
