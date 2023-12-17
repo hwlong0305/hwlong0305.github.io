@@ -10,7 +10,7 @@
             }
 
             /*Header*/
-            h1.header {
+            header h1 {
                 font-family: 'Satisfy', cursive;
                 color: #382633;
             }
