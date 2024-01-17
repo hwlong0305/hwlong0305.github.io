@@ -4,23 +4,38 @@
         <title>Fancy Form Exercise</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            @media only screen and (max-width: 480px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+
+            }
+        </style>
     </head>
     <body>
-        <form action="fancy-form-action.html" method="get">
-            <label for="first_name">First Name:</label>
-            <input type="text" name="firstName" />
+        <div name="form-box">
+            <form action="fancy-form-action.html" method="get">
+                <label for="first_name" class="labels">First Name:</label>
+                <input type="text" name="firstName" class="fields" /> <br />
 
-            <label for="last_name">Last Name:</label>
-            <input type="text" name="lastName" />
+                <label for="last_name" class="labels">Last Name:</label>
+                <input type="text" name="lastName"  class="fields"  /> <br />
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" />
+                <label for="email" class="labels">Email:</label>
+                <input type="email" name="email"  class="fields"  /> <br />
 
-            <label for="favorite_color">Favorite Color:</label>
-            <input type="color" name="colorPicker" value="#50364A" />
+                <label for="favorite_color" class="labels">Favorite Color:</label>
+                <input type="color" name="colorPicker" value="#50364A"  class="fields"  /> <br />
 
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
 
-        </form>
+            </form>
+        </div>
     </body>
 </html>
