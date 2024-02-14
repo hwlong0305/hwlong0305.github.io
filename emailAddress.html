@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fancy Form Exercise</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script>
+            createAddress() {
+
+                let first= document.getElementByID(firstName);
+                let initial = first.charAt(0);
+                let last= document.getElementByID(lastName);
+                let emailAddress = initial + "." + last + "@waketech.edu";
+
+                document.alert(emailAddress)
+
+
+            }
+
+        </script>
+
+        <div name="form-box">
+            <form action="fancy-form-action.html" method="get">
+                <label for="firstName" class="labels">First Name:</label>
+                <input type="text" name="firstName" class="fields" id="firstName" /> <br />
+
+                <label for="lastName" class="labels">Last Name:</label>
+                <input type="text" name="lastName"  class="fields"  id="lastName" /> <br />
+
+                <label for="email" class="labels">Email:</label>
+                <input type="email" name="email"  class="fields"  /> <br />
+
+                <label for="favorite_color" class="labels">Favorite Color:</label>
+                <input type="color" name="colorPicker" value="#50364A"  class="fields"  /> <br />
+
+                <button type="button" onclick="createAddress()">Get Email Address</button>
+
+            </form>
+        </div>
+    </body>
+</html>
