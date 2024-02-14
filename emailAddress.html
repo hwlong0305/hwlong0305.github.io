@@ -10,9 +10,9 @@
         <script>
             createAddress() {
 
-                let first= document.getElementByID(firstName);
+                let first= document.getElementByID(firstName).value;
                 let initial = first.charAt(0);
-                let last= document.getElementByID(lastName);
+                let last= document.getElementByID(lastName).value;
                 let emailAddress = initial + "." + last + "@waketech.edu";
 
                 alert(emailAddress);
