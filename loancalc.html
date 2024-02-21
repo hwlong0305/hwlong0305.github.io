@@ -46,20 +46,33 @@
 
                                let loanBalance = loan;
 
-                               document.getElementById("paymentTable").innerHTML = "<table><th><td>Payment Amount</td><td>Balance</td></th>";
+                               let tableContents ="";
+
+                               let newMonthlyInterest;
+
+                               tableContents = "<table><tr><th>Payment Amount</th><th>Balance</th></tr>";
                                
                                do{
                                 loanBalance = loanBalance - payment;
 
-                                document.getElementById("paymentTable").innerHTML += "<tr><td>" + payment + "</td><td>" + loanBalance + "</td></tr>";
+                                tableContents += "<tr><td>" + payment + "</td><td>" + loanBalance.toFixed(2) + "</td></tr>";
 
-                                loanBalance = loanBalance + monthlyInterest;
+                                newMonthlyInterest = ((rate * .01) / 12) * loanBalance;
+
+                                loanBalance = loanBalance + newMonthlyInterest;
 
                                }
                                
                                while (loanBalance >= payment);
 
-                               document.getElementById("paymentTable").innerHTML += "</table>";
+                               let finalBalance = loanBalance - loanBalance;
+
+                               tableContents += "<tr><td>" + loanBalance.toFixed(2) + "</td><td>" + finalBalance.toFixed(2) + "</td></tr>";
+
+
+                               tableContents  += "</table>";
+
+                               document.getElementById("paymentTable").innerHTML = tableContents;
 
                             }
                             
