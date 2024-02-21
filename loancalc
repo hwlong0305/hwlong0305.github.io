@@ -8,7 +8,7 @@
     </head>
     <body>
         <div name="form-box">
-            <form action="fancy-form-action.html" method="get">
+            <form action="#" method="get">
                 <label for="loanAmount" class="labels">Loan Amount:</label>
                 <input type="text" name="loanAmount" id="loanAmount" class="fields" /> <br />
 
@@ -21,7 +21,11 @@
                 <button type="button" onClick="outputPayment()">Submit</button>
 
             </form>
-
+                <div>
+                    <table class="paymentTable">
+                        <th><td>Payment Amount</td><td>Balance</td></th>
+                    </table>
+                </div>
             <script>
                 function outputPayment(){
                     let rate = parseFloat(document.getElementById("interestRate").value),
@@ -43,10 +47,12 @@
 
                                let loanBalance = loan;
                                
-                              // do(LoanBalance >= payment){
+                               do(LoanBalance >= payment){
+                                let loanBalance = loanBalance - payment;
 
+                                alert(loanBalnce);
 
-                              // }
+                               }
 
                             }
                             
