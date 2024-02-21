@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loan payment table</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <div name="form-box">
+            <form action="#" method="get">
+                <label for="loanAmount" class="labels">Loan Amount:</label>
+                <input type="text" name="loanAmount" id="loanAmount" class="fields" /> <br />
+
+                <label for="interestRate" class="labels">Interest Rate:</label>
+                <input type="text" name="interestRate" id="interestRate" class="fields"  /> <br />
+
+                <label for="paymentAmount" class="labels">Payment:</label>
+                <input type="text" name="paymentAmount" id="paymentAmount" class="fields"  /> <br />
+
+                <button type="button" onClick="outputPayment()">Submit</button>
+
+            </form>
+                <div>
+                    <table class="paymentTable">
+                        <th><td>Payment Amount</td><td>Balance</td></th>
+                    </table>
+                </div>
+            <script>
+                function outputPayment(){
+                    let rate = parseFloat(document.getElementById("interestRate").value),
+                    loan = parseFloat(document.getElementById("loanAmount").value),
+                    payment = parseFloat(document.getElementById("paymentAmount").value);
+                        if(isNaN(rate) || isNaN(loan) || isNaN(payment)) {
+
+                            alert("You did not enter a valid number.")
+
+                        }else{
+
+                           let  monthlyInterest = ((rate * .01) / 12) * loan;
+
+                            if (payment <= monthlyInterest) {
+
+                                alert("This is a predatory loan.")
+                                
+                            }else{
+
+                               let loanBalance = loan;
+                               
+                               do(LoanBalance >= payment){
+                                let loanBalance = loanBalance - payment;
+
+                                alert(loanBalnce);
+
+                               }
+
+                            }
+                            
+                        }
+
+                }
+            </script>
+        </div>
+    </body>
+</html>
