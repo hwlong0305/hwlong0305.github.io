@@ -21,9 +21,8 @@
                 <button type="button" onClick="outputPayment()">Submit</button>
 
             </form>
-                <div>
-                    <table class="paymentTable">
-                        <th><td>Payment Amount</td><td>Balance</td></th>
+                <div id="paymentTable">
+                    
                     </table>
                 </div>
             <script>
@@ -46,17 +45,21 @@
                             }else{
 
                                let loanBalance = loan;
+
+                               document.getElementById("paymentTable").innerHTML = "<table><th><td>Payment Amount</td><td>Balance</td></th>";
                                
                                do{
                                 loanBalance = loanBalance - payment;
 
-                                alert(loanBalance);
+                                document.getElementById("paymentTable").innerHTML = "<tr><td>" + payment + "</td><td>" + loanBalance + </td></tr>";
 
                                 loanBalance = loanBalance + monthlyInterest;
 
                                }
                                
                                while (loanBalance >= payment);
+
+                               document.getElementById("paymentTable").innerHTML = "</table>";
 
                             }
                             
